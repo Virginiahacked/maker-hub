@@ -11,7 +11,6 @@ build:
 run: build
 	npm start
 
-
 db_init: 
 	flask db init
 
