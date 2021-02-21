@@ -4,16 +4,16 @@ import sys
 
 from flask import Flask, render_template
 
-from maker_hub import commands, public, user
+from maker_hub import commands, parts, projects, public, user
 from maker_hub.extensions import (
     bcrypt,
     cache,
     csrf_protect,
     db,
-    ma,
     debug_toolbar,
     flask_static_digest,
     login_manager,
+    ma,
     migrate,
 )
 
@@ -52,6 +52,8 @@ def register_blueprints(app):
     """Register Flask blueprints."""
     app.register_blueprint(public.views.blueprint)
     app.register_blueprint(user.views.blueprint)
+    app.register_blueprint(parts.views.blueprint)
+    app.register_blueprint(projects.views.blueprint)
     return None
 
 
