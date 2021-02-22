@@ -18,7 +18,7 @@ migrate:
 	flask db migrate
 	flask db upgrade
 
-init: db_init migrate
+dbinit: db_init migrate
 
 lint:
 	$(LINTER) $(PROJ_SLUG)
