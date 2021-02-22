@@ -2,12 +2,13 @@
 
 from datetime import datetime
 
-from maker_hub.extensions import db
+from maker_hub.database import PkModel, db
 
 
-class Project(db.Model):
+class Project(PkModel):
     """Project Model."""
 
+    __tablename__ = "roles"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), unique=True, nullable=False)
     description = db.Column(db.String(80), nullable=True)
