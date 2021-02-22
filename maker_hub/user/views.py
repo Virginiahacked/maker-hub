@@ -10,5 +10,5 @@ blueprint = Blueprint(
 @blueprint.route("/")
 @login_required
 def dashboard():
-    """user dashboard."""
+    """User dashboard."""
     return render_template("users/dashboard.html")
