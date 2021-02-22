@@ -8,7 +8,7 @@ from maker_hub.database import PkModel, db
 class Project(PkModel):
     """Project Model."""
 
-    __tablename__ = "roles"
+    __tablename__ = "projects"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), unique=True, nullable=False)
     description = db.Column(db.String(80), nullable=True)

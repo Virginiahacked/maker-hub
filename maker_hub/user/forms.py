@@ -9,6 +9,12 @@ from .models import User
 class RegisterForm(FlaskForm):
     """Register form."""
 
+    first_name = StringField(
+        "Firstname", validators=[DataRequired(), Length(min=3, max=30)]
+    )
+    last_name = StringField(
+        "Lastname", validators=[DataRequired(), Length(min=3, max=30)]
+    )
     username = StringField(
         "Username", validators=[DataRequired(), Length(min=3, max=25)]
     )
